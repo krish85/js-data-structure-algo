@@ -65,6 +65,16 @@ class LinkedList{
         return this;
       }
   }
+  /**
+ * remove the value in the given index
+ */
+  remove(index){
+    const previousItem = this.traverseToIndex(index-1);
+    const removeItem = previousItem.next;
+    previousItem.next = removeItem.next;
+    this.length--;
+    return this;
+  }
 /**
  * Traverse to the given index and return the value in the index
  */
